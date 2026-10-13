@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compress PDF</title>
+<link rel="stylesheet" href="../../shared/css/style.css">
+</head>
+<body>
+<h1>Compress PDF</h1>
+<div id="drop">Drag &amp; drop file PDF di sini, atau klik untuk memilih</div>
+<input type="file" id="file" accept="application/pdf,.pdf" hidden>
+
+<div class="opts">
+  <label>Tingkat kompresi
+    <select id="level">
+      <option value="low">Low compress (kualitas rendah, ukuran terkecil)</option>
+      <option value="recommended" selected>Recommended compress (kualitas tinggi, ukuran kecil)</option>
+      <option value="high">High compress (kualitas tertinggi, ukuran turun sedikit)</option>
+    </select>
+  </label>
+  <label>Cara
+    <select id="mode">
+      <option value="images">Kompres gambar di dalam PDF (teks tetap bisa dipilih)</option>
+      <option value="raster">Ubah halaman jadi gambar (teks tidak bisa dipilih)</option>
+    </select>
+  </label>
+  <button id="dl" disabled>Compress &amp; download</button>
+</div>
+
+<div id="msg"></div>
+
+<script src="../../vendor/pdf-lib/pdf-lib.min.js"></script>
+<script src="../../vendor/pdfjs/pdf.min.js"></script>
+<script src="../../vendor/fflate/fflate.js"></script>
+<script src="../../shared/js/common.js"></script>
+<script src="../../shared/js/tools.js"></script>
+<script src="../../shared/js/layout.js" data-root="../../" data-tool="compress-file"></script>
+<script src="core.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

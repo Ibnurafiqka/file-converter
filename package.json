@@ -1,0 +1,7 @@
+{
+  "name": "internal-tools",
+  "private": true,
+  "description": "Kumpulan alat konversi internal (web statis, tanpa build). package.json hanya dipakai untuk tes.",
+  "scripts": { "test": "node tests/smoke.js", "start": "php -S localhost:8000" },
+  "devDependencies": { "@napi-rs/canvas": "*", "pdfjs-dist": "3.11.174" }
+}

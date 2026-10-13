@@ -1,0 +1,30 @@
+body { font-family: system-ui, sans-serif; max-width: 900px; margin: 2rem auto; padding: 0 1rem; color: #222; }
+h1 { font-size: 1.4rem; }
+#drop { border: 2px dashed #888; border-radius: 8px; padding: 2.5rem 1rem; text-align: center; cursor: pointer; }
+#drop.over { background: #eef6ff; border-color: #2563eb; }
+.opts { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; margin: 1rem 0; }
+button { background: #2563eb; color: #fff; border: 0; border-radius: 6px; padding: .6rem 1.2rem; cursor: pointer; }
+button:disabled { background: #aaa; cursor: not-allowed; }
+#msg { margin: .5rem 0; font-size: .9rem; }
+#msg.err { color: #b91c1c; }
+.wrap { overflow-x: auto; max-height: 360px; border: 1px solid #ddd; }
+table { border-collapse: collapse; font-size: .85rem; width: 100%; }
+td, th { border: 1px solid #e5e5e5; padding: 4px 8px; white-space: nowrap; }
+th { background: #f5f5f5; position: sticky; top: 0; }
+
+/* --- navigasi & komponen bersama (fitur PDF) --- */
+.nav { display: flex; gap: .25rem; flex-wrap: wrap; margin-bottom: 1rem; border-bottom: 1px solid #ddd; }
+.nav a { padding: .5rem .8rem; color: #555; text-decoration: none; border-bottom: 2px solid transparent; }
+.nav a.on { color: #2563eb; border-color: #2563eb; font-weight: 600; }
+.files { list-style: none; padding: 0; margin: 1rem 0; }
+.files li { display: flex; gap: .5rem; align-items: center; padding: .4rem .6rem; border: 1px solid #e5e5e5; border-radius: 6px; margin-bottom: .35rem; }
+.files .nm { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.files .sz { color: #777; font-size: .8rem; }
+button.sm { background: #eee; color: #222; padding: .2rem .55rem; }
+.opts input[type=number] { width: 4.5rem; }
+
+/* --- beranda: kartu daftar tool --- */
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1rem; }
+.card { display: flex; flex-direction: column; gap: .3rem; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; text-decoration: none; color: inherit; }
+.card:hover { border-color: #2563eb; background: #f8fbff; }
+.card span { color: #666; font-size: .9rem; }

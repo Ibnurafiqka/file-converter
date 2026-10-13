@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gambar → PDF</title>
+<link rel="stylesheet" href="../../shared/css/style.css">
+</head>
+<body>
+<h1>Gambar → PDF</h1>
+<div id="drop">Drag &amp; drop gambar (JPG, PNG, WebP, …) atau klik untuk memilih</div>
+<input type="file" id="file" accept="image/*" multiple hidden>
+<ul id="list" class="files"></ul>
+
+<div class="opts">
+  <label>Kertas
+    <select id="size"><option value="a4">A4</option><option value="letter">Letter</option><option value="fit">Sesuai ukuran gambar</option></select>
+  </label>
+  <label>Orientasi
+    <select id="orient"><option value="auto">Otomatis</option><option value="portrait">Portrait</option><option value="landscape">Landscape</option></select>
+  </label>
+  <label>Margin (mm) <input type="number" id="margin" value="10" min="0" max="40"></label>
+  <label>Kualitas
+    <select id="quality"><option value="tinggi">Tinggi</option><option value="sedang">Sedang (file lebih kecil)</option><option value="kecil">Kecil</option></select>
+  </label>
+  <button id="go" disabled>Buat PDF</button>
+</div>
+<div id="msg"></div>
+
+<script src="../../vendor/pdf-lib/pdf-lib.min.js"></script>
+<script src="../../shared/js/common.js"></script>
+<script src="../../shared/js/tools.js"></script>
+<script src="../../shared/js/layout.js" data-root="../../" data-tool="image-to-pdf"></script>
+<script src="core.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

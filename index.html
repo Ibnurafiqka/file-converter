@@ -3,37 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CSV → Excel</title>
-<link rel="stylesheet" href="style.css">
+<title>Internal Tools</title>
+<link rel="stylesheet" href="shared/css/style.css">
 </head>
 <body>
-<h1>CSV → Excel</h1>
-<div id="drop">Drag &amp; drop file CSV di sini, atau klik untuk memilih</div>
-<input type="file" id="file" accept=".csv,.tsv,.txt" hidden>
-
-<div class="opts">
-  <label>Delimiter
-    <select id="delim">
-      <option value="">Auto</option>
-      <option value=",">, (koma)</option>
-      <option value=";">; (titik koma)</option>
-      <option value="&#9;">Tab</option>
-      <option value="|">| (pipe)</option>
-    </select>
-  </label>
-  <label>Encoding
-    <select id="enc">
-      <option value="utf-8">UTF-8</option>
-      <option value="windows-1252">Windows-1252</option>
-    </select>
-  </label>
-  <label><input type="checkbox" id="asText" checked> Semua kolom sebagai teks (jaga nol di depan)</label>
-  <button id="dl" disabled>Download .xlsx</button>
-</div>
-
-<div id="msg"></div>
-<div class="wrap"><table id="preview"></table></div>
-
-<script src="app.js"></script>
+<h1>Internal Tools</h1>
+<p>Kumpulan alat konversi untuk keperluan internal. Semua proses berjalan di browser Anda; file tidak diunggah ke server.</p>
+<div id="cards" class="cards"></div>
+<script src="shared/js/tools.js"></script>
+<script src="shared/js/layout.js" data-root="./" data-tool=""></script>
 </body>
 </html>

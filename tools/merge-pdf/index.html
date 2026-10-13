@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gabung PDF</title>
+<link rel="stylesheet" href="../../shared/css/style.css">
+</head>
+<body>
+<h1>Gabung PDF</h1>
+<div id="drop">Drag &amp; drop beberapa file PDF atau klik untuk memilih</div>
+<input type="file" id="file" accept="application/pdf,.pdf" multiple hidden>
+<ul id="list" class="files"></ul>
+
+<div class="opts">
+  <span>Urutan di daftar = urutan halaman di hasil (pakai ↑ ↓).</span>
+  <button id="go" disabled>Gabungkan</button>
+</div>
+<div id="msg"></div>
+
+<script src="../../vendor/pdf-lib/pdf-lib.min.js"></script>
+<script src="../../shared/js/common.js"></script>
+<script src="../../shared/js/tools.js"></script>
+<script src="../../shared/js/layout.js" data-root="../../" data-tool="merge-pdf"></script>
+<script src="core.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

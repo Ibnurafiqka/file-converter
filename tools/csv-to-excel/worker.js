@@ -1,6 +1,6 @@
 /* worker.js — streaming CSV → XLSX (tanpa SheetJS, tidak membekukan halaman) */
-if (typeof importScripts === 'function') importScripts('fflate.js');
-const FF = typeof fflate !== 'undefined' ? fflate : require('./fflate.js');
+if (typeof importScripts === 'function') importScripts('../../vendor/fflate/fflate.js');
+const FF = typeof fflate !== 'undefined' ? fflate : require('../../vendor/fflate/fflate.js');
 
 const MAX_ROWS = 1048576, MAX_COLS = 16384, MAX_CELL = 32767;
 const NUM_RE = /^-?(0|[1-9]\d{0,14})(\.\d+)?$/;

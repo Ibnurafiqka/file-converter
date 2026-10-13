@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PDF → Excel</title>
+<link rel="stylesheet" href="../../shared/css/style.css">
+</head>
+<body>
+<h1>PDF → Excel</h1>
+<div id="drop">Drag &amp; drop file PDF (yang berisi teks/tabel) atau klik untuk memilih</div>
+<input type="file" id="file" accept="application/pdf,.pdf" hidden>
+
+<div class="opts">
+  <label>Tampilan
+    <select id="view"><option value="layout" selected>Ikuti tampilan PDF (warna, border, sel gabungan)</option><option value="plain">Teks &amp; tabel saja</option></select>
+  </label>
+  <label>Jarak minimum antar kolom
+    <select id="gap"><option value="0.5">Kecil</option><option value="0.8" selected>Sedang</option><option value="1.5">Besar</option></select>
+  </label>
+  <label>Hasil
+    <select id="mode"><option value="all">Satu sheet (semua halaman)</option><option value="page">Satu sheet per halaman</option></select>
+  </label>
+  <label>Angka
+    <select id="num"><option value="text">Biarkan teks</option><option value="id">Format Indonesia (1.234,56)</option><option value="en">Format Inggris (1,234.56)</option></select>
+  </label>
+  <button id="dl" disabled>Download .xlsx</button>
+</div>
+<div id="msg"></div>
+<div class="wrap"><table id="preview"></table></div>
+
+<script src="../../vendor/pdfjs/pdf.min.js"></script>
+<script src="../../vendor/fflate/fflate.js"></script>
+<script src="../../shared/js/common.js"></script>
+<script src="../../shared/js/xlsx-lite.js"></script>
+<script src="../../shared/js/tools.js"></script>
+<script src="../../shared/js/layout.js" data-root="../../" data-tool="pdf-to-excel"></script>
+<script src="table.js"></script>
+<script src="graphics.js"></script>
+<script src="sheet-layout.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
